@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - PhongHaGiang Photography</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header>
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <h1>PhongHaGiang</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <h2>Photography Gallery</h2>
+            <p>A curated collection of my favorite shots</p>
+        </section>
+
+        <!-- Gallery section with 5+ images using flexbox and nth-child -->
+        <section class="gallery">
+            <h3>Featured Collection</h3>
+            <div class="gallery-flex">
+                <!-- Each image styled with nth-child selector -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop" 
+                         alt="Majestic mountain range with snow-capped peaks under blue sky" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Mountain Majesty</h4>
+                        <p>Swiss Alps Collection</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=350&h=250&fit=crop" 
+                         alt="Serene ocean waves meeting sandy beach at golden hour" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Ocean Dreams</h4>
+                        <p>Coastal Series</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=350&h=250&fit=crop" 
+                         alt="Dense forest with tall trees and filtered sunlight" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Forest Light</h4>
+                        <p>Nature's Cathedral</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=350&h=250&fit=crop" 
+                         alt="Tropical beach with crystal clear turquoise water" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Paradise Found</h4>
+                        <p>Tropical Escape</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464822759444-d8c773cd2de8?w=350&h=250&fit=crop" 
+                         alt="Night sky filled with countless stars over silhouetted landscape" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Starry Night</h4>
+                        <p>Astrophotography</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=350&h=250&fit=crop" 
+                         alt="Vibrant sunset painting the sky in orange and pink hues" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Golden Hour</h4>
+                        <p>Sunset Series</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=350&h=250&fit=crop" 
+                         alt="Misty lake with perfect mountain reflection" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Mirror Lake</h4>
+                        <p>Reflection Collection</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=350&h=250&fit=crop" 
+                         alt="Winding forest path through autumn trees with golden leaves" 
+                         class="gallery-image">
+                    <div class="image-overlay">
+                        <h4>Autumn Path</h4>
+                        <p>Seasonal Beauty</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories section using CSS Grid -->
+        <section class="categories">
+            <h3>Photography Categories</h3>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <h4>Nature</h4>
+                    <p>Landscapes, wildlife, and natural wonders</p>
+                </div>
+                <div class="category-card">
+                    <h4>Portraits</h4>
+                    <p>Professional and artistic portrait photography</p>
+                </div>
+                <div class="category-card">
+                    <h4>Events</h4>
+                    <p>Weddings, celebrations, and special moments</p>
+                </div>
+                <div class="category-card">
+                    <h4>Architecture</h4>
+                    <p>Buildings, structures, and urban photography</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PhongHaGiang Photography. All rights reserved.</p>
+        <p>Creating memories, one frame at a time.</p>
+    </footer>
+</body>
+</html>

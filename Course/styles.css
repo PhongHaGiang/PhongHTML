@@ -1,0 +1,686 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Skip link - positioned absolutely, only visible on focus */
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+    outline: 2px solid #f39c12;
+    outline-offset: 2px;
+}
+
+/* Header and Navigation using FLEXBOX */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.nav-logo h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Navigation hover effects */
+.nav-menu a:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.nav-menu a:focus {
+    outline: none;
+    background-color: rgba(255,255,255,0.2);
+    border-color: #f39c12;
+}
+
+.nav-menu a[aria-current="page"] {
+    background-color: #f39c12;
+    border-color: #e67e22;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Hero section using FLEXBOX */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    min-height: 400px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.3);
+    border-color: #d68910;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+/* Featured image using BOX MODEL */
+.featured-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 4px solid #ecf0f1;
+    padding: 8px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.featured-image:hover {
+    transform: scale(1.02);
+    border-color: #f39c12;
+    box-shadow: 0 15px 40px rgba(243, 156, 18, 0.2);
+}
+
+/* Services section using CSS GRID */
+.services {
+    margin: 4rem 0;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Service images using BOX MODEL */
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.service-card h3 {
+    padding: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Featured work section using FLEXBOX */
+.featured-work {
+    margin: 4rem 0;
+    text-align: center;
+}
+
+.featured-work h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.featured-work p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 3rem;
+}
+
+.featured-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Featured photos using BOX MODEL */
+.featured-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 3px solid #ecf0f1;
+    padding: 5px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease;
+}
+
+.featured-item h3 {
+    padding: 1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.featured-item p {
+    padding: 0 1rem 1rem;
+    color: #7f8c8d;
+}
+
+/* Page headers */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.page-header h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* Gallery section using FLEXBOX with nth-child */
+.gallery {
+    margin: 3rem 0;
+}
+
+.gallery h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.gallery-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Gallery images with BOX MODEL and nth-child selector */
+.gallery-image {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid #ecf0f1;
+    padding: 6px;
+    transition: all 0.3s ease;
+}
+
+/* nth-child selector implementation - different border-radius for odd/even items */
+.gallery-item:nth-child(odd) .gallery-image {
+    border-radius: 25px 5px 25px 5px;
+    border-color: #3498db;
+}
+
+.gallery-item:nth-child(even) .gallery-image {
+    border-radius: 5px 25px 5px 25px;
+    border-color: #e74c3c;
+}
+
+/* Advanced nth-child with hover pseudo-class */
+.gallery-item:nth-child(odd):hover .gallery-image {
+    transform: rotate(-2deg) scale(1.05);
+    border-color: #2980b9;
+}
+
+.gallery-item:nth-child(even):hover .gallery-image {
+    transform: rotate(2deg) scale(1.05);
+    border-color: #c0392b;
+}
+
+/* Image overlay */
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem 1rem 1rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+    transform: translateY(0);
+}
+
+.image-overlay h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Categories section using CSS GRID */
+.categories {
+    margin: 4rem 0;
+}
+
+.categories h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    border-color: #f39c12;
+    transform: translateY(-5px);
+}
+
+/* About page styles using CSS GRID */
+.about-content {
+    margin: 3rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-text h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.about-text h3:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-image-container {
+    position: relative;
+}
+
+/* About portrait using BOX MODEL */
+.about-portrait {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 6px solid #ecf0f1;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.about-portrait:hover {
+    border-color: #f39c12;
+    transform: scale(1.02);
+}
+
+.image-caption {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Skills section using FLEXBOX */
+.skills-equipment {
+    margin: 4rem 0;
+}
+
+.skills-equipment h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.skills-flex {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* Skill images using BOX MODEL */
+.skill-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #ecf0f1;
+    padding: 4px;
+    border-radius: 8px 8px 0 0;
+}
+
+.skill-card h4 {
+    padding: 1rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+    padding: 0 1rem 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Contact section */
+.contact-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.contact-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.contact-button {
+    background: white;
+    color: #667eea;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer p:last-child {
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .gallery-image {
+        width: 300px;
+        height: 200px;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .services-grid,
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-image {
+        width: 280px;
+        height: 180px;
+    }
+    
+    .page-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Focus styles for accessibility */
+*:focus {
+    outline: 2px solid #f39c12;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .service-card,
+    .featured-item,
+    .category-card,
+    .skill-card {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
